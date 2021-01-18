@@ -1,17 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDisqusComments from "react-disqus-comments";
 import urljoin from "url-join";
 import config from "../../data/SiteConfig";
 
 function Disqus({ postNode }) {
-  const [toasts, setToasts] = useState([]);
-
-  function notifyAboutComment() {
-    const newToasts = toasts.slice();
-    newToasts.push({ text: "New comment available!" });
-    setToasts(newToasts);
-  }
-
   if (!config.disqusShortname) {
     return null;
   }
@@ -24,7 +16,6 @@ function Disqus({ postNode }) {
       title={post.title}
       url={url}
       category_id={post.category_id || null}
-      onNewComment={notifyAboutComment}
     />
   );
 }
