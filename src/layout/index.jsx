@@ -8,7 +8,7 @@ import Header from "../components/Header"
 import styled, { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
-	*, *::before, *::after {
+	*, *:before, *:after {
 	  box-sizing: border-box;
 	}
 

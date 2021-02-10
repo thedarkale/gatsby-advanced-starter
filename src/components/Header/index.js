@@ -1,7 +1,9 @@
 import React, { useEffect } from "react"
 import styled from "styled-components"
 import leaf from "/static/leaf.svg"
-import { useWindowSize } from "../../utils"
+
+import Social from "../Social"
+import Promotion from "../Promotion"
 
 const Container = styled.header`
   width: 100%;
@@ -13,6 +15,7 @@ const Heading = styled.div`
   align-items: center;
   width: 100%;
   padding: min(5vw, 40px);
+  position: relative;
 `
 const Logo = styled.span`
   color: #657067;
@@ -22,7 +25,7 @@ const Logo = styled.span`
 `
 
 const Nav = styled.nav`
-  background-color: #F8F8F8;
+  background-color: #E4EAEE;
   padding: 50px;
   position: relative;
 `
@@ -46,8 +49,8 @@ const Space = styled.div`
   width: 100%;
   border-top: 2px solid #FC3F80;
   @media (min-width: 1200px) {
-    border-left: 2px solid ${props => props.left ? "#FC3F80" : "#F8F8F8"};
-    border-right: 2px solid ${props => props.right ? "#FC3F80" : "#F8F8F8"};
+    border-left: 2px solid ${props => props.left ? "#FC3F80" : "#E4EAEE"};
+    border-right: 2px solid ${props => props.right ? "#FC3F80" : "#E4EAEE"};
   }
 `
 
@@ -57,14 +60,30 @@ const Img = styled.img`
   margin-top: max(-8vw, -70px);
 `
 
+const Info = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 1000px) {
+    display: none;
+  }
+`
+
 const Header = () => {
   return (
     <Container>
       <Heading>
+        <Info>
+          <Social />
+          <Promotion />
+        </Info>
         <Logo>thedarkale</Logo>
-        {/* <Social />
-        <Logo />
-        <Promotion /> */}
       </Heading>
       <Nav>
         <LeafContainer>
