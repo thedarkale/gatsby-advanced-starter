@@ -48,7 +48,7 @@ export default function MainLayout({ children }) {
   return (
   	<Root>
 			<GlobalStyle theme="light" />
-			{/* <Ad /> */}
+			<Ad />
 	    <Header />
 	    <LayoutContainer>
 	      <Helmet>

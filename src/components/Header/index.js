@@ -12,7 +12,7 @@ const Heading = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 2.5vw;
+  padding: min(5vw, 40px);
 `
 const Logo = styled.span`
   color: #657067;
