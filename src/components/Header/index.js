@@ -16,7 +16,7 @@ const Logo = styled.span`
   color: #657067;
   font-family: Poppins;
   font-size: 7vw;
-  font-weight: 200;
+  font-weight: 300;
 `
 
 const Nav = styled.nav`
@@ -47,7 +47,7 @@ const Space = styled.div`
 
 const Img = styled.img`
   width: calc(30px + 45vw);
-  margin-top: -9vw;
+  margin-top: -8.5vw;
 `
 
 const Header = () => {
