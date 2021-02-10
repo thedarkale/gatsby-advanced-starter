@@ -3,19 +3,21 @@ import styled from "styled-components"
 import leaf from "/static/leaf.svg"
 
 const Container = styled.header`
-  max-width: 1000px;
+  max-width: 1200px;
+  width: 100%;
 `
 
 const Heading = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4vw;
+  width: 100%;
+  padding: 30px;
 `
 const Logo = styled.span`
   color: #657067;
   font-family: Poppins;
-  font-size: 7vw;
+  font-size: min(7vw, 50px);
   font-weight: 300;
 `
 
@@ -46,8 +48,9 @@ const Space = styled.div`
 `
 
 const Img = styled.img`
+  max-width: 400px;
   width: calc(30px + 45vw);
-  margin-top: -8.5vw;
+  margin-top: -70px;
 `
 
 const Header = () => {

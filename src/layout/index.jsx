@@ -32,16 +32,24 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const LayoutContainer = styled.div`
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100%;
+  width: 100%;
+`
+
+const Root = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 export default function MainLayout({ children }) {
   return (
-  	<>
+  	<Root>
 			<GlobalStyle theme="light" />
-			<Ad />
+			{/* <Ad /> */}
 	    <Header />
 	    <LayoutContainer>
 	      <Helmet>
@@ -50,6 +58,6 @@ export default function MainLayout({ children }) {
 	      </Helmet>
 	      {children}
 	    </LayoutContainer>
-  	</>
+  	</Root>
   );
 }
