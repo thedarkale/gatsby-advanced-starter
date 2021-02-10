@@ -26,8 +26,11 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	#___gatsby #gatsby-focus-wrapper {
-	  min-height: 100vh;
-	  min-width: 100vw;
+	  min-height: 100%;
+	  min-width: 100%;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
 	}
 `
 
@@ -37,12 +40,8 @@ const LayoutContainer = styled.div`
 `
 
 const Root = styled.div`
-  height: 100%;
+  max-width: 1200px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `
 
 export default function MainLayout({ children }) {

@@ -1,9 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import leaf from "/static/leaf.svg"
+import { useWindowSize } from "../../utils"
 
 const Container = styled.header`
-  max-width: 1200px;
   width: 100%;
 `
 
@@ -44,7 +44,11 @@ const Leaf = styled.div`
 const Space = styled.div`
   height: 100%;
   width: 100%;
-  border-top: 1px solid #FC3F80;
+  border-top: 2px solid #FC3F80;
+  @media (min-width: 1200px) {
+    border-left: 2px solid ${props => props.left ? "#FC3F80" : "#F8F8F8"};
+    border-right: 2px solid ${props => props.right ? "#FC3F80" : "#F8F8F8"};
+  }
 `
 
 const Img = styled.img`
@@ -64,11 +68,11 @@ const Header = () => {
       </Heading>
       <Nav>
         <LeafContainer>
-          <Space></Space>
+          <Space left />
           <Leaf>
             <Img src={leaf} alt="leaf" />
           </Leaf>
-          <Space></Space>
+          <Space right />
         </LeafContainer>
         {/* <Menu />
         <Categories /> */}
