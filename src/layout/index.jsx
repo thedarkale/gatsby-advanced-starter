@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 	  min-height: 100%;
 	  min-width: 100%;
 	  font-family: Montserrat;
-	  background-color: #FFF8FA;
+	  /* background-color: #FFF8FA; */
 	}
 
 	#___gatsby #gatsby-focus-wrapper {
