@@ -12,7 +12,7 @@ const Heading = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 30px;
+  padding: 2.5vw;
 `
 const Logo = styled.span`
   color: #657067;
@@ -54,7 +54,7 @@ const Space = styled.div`
 const Img = styled.img`
   max-width: 400px;
   width: calc(30px + 45vw);
-  margin-top: -70px;
+  margin-top: max(-8vw, -70px);
 `
 
 const Header = () => {
