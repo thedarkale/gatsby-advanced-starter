@@ -1,16 +1,21 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { graphql } from "gatsby";
-import Layout from "../layout";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import Footer from "../components/Footer/Footer";
-import config from "../../data/SiteConfig";
-import "./b16-tomorrow-dark.css";
-import "./post.css";
+import React from "react"
+import { Helmet } from "react-helmet"
+import { graphql } from "gatsby"
+import Layout from "../layout"
+import UserInfo from "../components/UserInfo/UserInfo"
+import Disqus from "../components/Disqus/Disqus"
+import PostTags from "../components/PostTags/PostTags"
+import SocialLinks from "../components/SocialLinks/SocialLinks"
+import SEO from "../components/SEO/SEO"
+import Footer from "../components/Footer/Footer"
+import config from "../../data/SiteConfig"
+import styled from "styled-components"
+
+const PostMeta = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
 
 export default function PostTemplate({ data, pageContext }) {
   const { slug } = pageContext;
@@ -31,10 +36,10 @@ export default function PostTemplate({ data, pageContext }) {
           <h1>{post.title}</h1>
           {/* eslint-disable-next-line react/no-danger */}
           <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          <div className="post-meta">
+          <PostMeta>
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
-          </div>
+          </PostMeta>
           <UserInfo config={config} />
           <Disqus postNode={postNode} />
           <Footer config={config} />

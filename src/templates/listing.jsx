@@ -1,11 +1,27 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { graphql, Link } from "gatsby";
-import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
-import "./listing.css";
+import React from "react"
+import { Helmet } from "react-helmet"
+import { graphql, Link } from "gatsby"
+import Layout from "../layout"
+import PostListing from "../components/PostListing/PostListing"
+import SEO from "../components/SEO/SEO"
+import config from "../../data/SiteConfig"
+import styled from "styled-components"
+
+const ListingContainer = styled.div`
+  min-height: 100%;
+  min-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`
+const PagingContainer = styled.div`
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+`
 
 function Listing({ pageContext, data }) {
   function renderPaging() {
@@ -16,7 +32,7 @@ function Listing({ pageContext, data }) {
     const isLastPage = currentPageNum === pageCount;
 
     return (
-      <div className="paging-container">
+      <PagingContainer>
         {!isFirstPage && <Link to={prevPage}>Previous</Link>}
         {[...Array(pageCount)].map((_val, index) => {
           const pageNum = index + 1;
@@ -30,7 +46,7 @@ function Listing({ pageContext, data }) {
           );
         })}
         {!isLastPage && <Link to={nextPage}>Next</Link>}
-      </div>
+      </PagingContainer>
     );
   }
 
@@ -38,14 +54,14 @@ function Listing({ pageContext, data }) {
 
   return (
     <Layout>
-      <div className="listing-container">
+      <ListingContainer>
         <div className="posts-container">
           <Helmet title={config.siteTitle} />
           <SEO />
           <PostListing postEdges={postEdges} />
         </div>
         {renderPaging()}
-      </div>
+      </ListingContainer>
     </Layout>
   );
 }
