@@ -9,7 +9,8 @@ const Container = styled.div`
 	flex: 1;
   color: #657067;
   @media (max-width: 550px) {
-	  overflow: scroll;
+		justify-content: flex-start;
+	  overflow: auto;
   }  
 `
 
@@ -28,13 +29,13 @@ const Categories = () => {
   return (
     <Container>
     	<Section>
-    		<Text>Home</Text>
+    		<Text focus>Home</Text>
     	</Section>
     	<Section>
 	      <Text>Music</Text>
     	</Section>
      	<Section>
-	      <Text focus>News</Text>
+	      <Text>News</Text>
     	</Section>
      	<Section>
 	      <Text>Lifestyle</Text>
