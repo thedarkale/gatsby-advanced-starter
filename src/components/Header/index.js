@@ -4,6 +4,8 @@ import leaf from "/static/leaf.svg"
 
 import Social from "../Social"
 import Promotion from "../Promotion"
+import Menu from "../Menu"
+import Categories from "../Categories"
 
 const Container = styled.header`
   width: 100%;
@@ -26,10 +28,14 @@ const Logo = styled.a`
   text-decoration: none;
 `
 
-const Nav = styled.nav`
+const Navigation = styled.div`
   background-color: #E4EAEE;
-  padding: 50px;
+  min-height: 70px;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 `
 
 const LeafContainer = styled.div`
@@ -87,7 +93,7 @@ const Header = () => {
         </Info>
         <Logo href="/">thedarkale</Logo>
       </Heading>
-      <Nav>
+      <Navigation>
         <LeafContainer>
           <Space left />
           <Leaf>
@@ -95,9 +101,9 @@ const Header = () => {
           </Leaf>
           <Space right />
         </LeafContainer>
-        {/* <Menu />
-        <Categories /> */}
-      </Nav>
+        <Menu />
+        <Categories />
+      </Navigation>
     </Container>
   )
 }
