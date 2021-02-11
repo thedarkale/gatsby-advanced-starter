@@ -30,7 +30,7 @@ const Logo = styled.a`
 
 const Navigation = styled.div`
   background-color: #f0f6fa;
-  min-height: 120px;
+  height: min(25vw, 120px);
   position: relative;
   display: flex;
   flex-direction: row;

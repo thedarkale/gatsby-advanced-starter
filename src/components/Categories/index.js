@@ -28,13 +28,13 @@ const Categories = () => {
   return (
     <Container>
     	<Section>
-    		<Text focus>Home</Text>
+    		<Text>Home</Text>
     	</Section>
     	<Section>
 	      <Text>Music</Text>
     	</Section>
      	<Section>
-	      <Text>News</Text>
+	      <Text focus>News</Text>
     	</Section>
      	<Section>
 	      <Text>Lifestyle</Text>
