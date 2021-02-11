@@ -7,7 +7,6 @@ const Container = styled.div`
 	flex-direction: row;
 	justify-content: center;
 	flex: 1;
-  color: #657067;
   @media (max-width: 550px) {
 		justify-content: flex-start;
 	  overflow: auto;
@@ -19,8 +18,10 @@ const Section = styled.div`
 	font-size: calc(.7em + min(.3vw, .7rem));
 `
 
-const Text = styled.span`
-	font-weight: 500;
+const Category = styled.a`
+	text-decoration: none;
+  color: #657067;
+	font-weight: ${props => props.focus ? "600" : "500"};
 	padding-bottom: 6px;
 	border-bottom: ${props => props.focus ? "5px solid #FC3F80" : "none"};
 `
@@ -29,22 +30,22 @@ const Categories = () => {
   return (
     <Container>
     	<Section>
-    		<Text focus>Home</Text>
+    		<Category href="/" focus>Home</Category>
     	</Section>
     	<Section>
-	      <Text>Music</Text>
+	      <Category href="#">Music</Category>
     	</Section>
      	<Section>
-	      <Text>News</Text>
+	      <Category href="#">News</Category>
     	</Section>
      	<Section>
-	      <Text>Lifestyle</Text>
+	      <Category href="#">Lifestyle</Category>
     	</Section>
      	<Section>
-	      <Text>Health</Text>
+	      <Category href="#">Health</Category>
     	</Section>
      	<Section>
-	      <Text>Science</Text>
+	      <Category href="#">Science</Category>
     	</Section>
     </Container>
   )

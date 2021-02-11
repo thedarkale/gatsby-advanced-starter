@@ -46,17 +46,20 @@ const Root = styled.div`
 
 export default function MainLayout({ children }) {
   return (
-  	<Root>
+  	<>
 			<GlobalStyle theme="light" />
 			<Ad />
-	    <Header />
-	    <LayoutContainer>
-	      <Helmet>
-	        <meta name="description" content={config.siteDescription} />
-	        <html lang="en" />
-	      </Helmet>
-	      {children}
-	    </LayoutContainer>
-  	</Root>
+	  	<Root>
+		    <Header />
+		    <LayoutContainer>
+		      <Helmet>
+		        <meta name="description" content={config.siteDescription} />
+		        <html lang="en" />
+		      </Helmet>
+		      {children}
+		    </LayoutContainer>
+	  	</Root>
+
+  	</>
   );
 }

@@ -9,6 +9,7 @@ const Container = styled.div`
   color: #E1E1E1;
   border-bottom: 1px solid #E1E1E1;
   font-size: 0.7rem;
+  width: 100%;
 `
 
 const Ad = () => {

@@ -2,20 +2,20 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 import Layout from "../layout"
+import Hero from "../components/Hero"
+import Latest from "../components/Latest"
 import PostListing from "../components/PostListing/PostListing"
 import SEO from "../components/SEO/SEO"
 import config from "../../data/SiteConfig"
 import styled from "styled-components"
 
-const ListingContainer = styled.div`
+const ListingContainer = styled.main`
   min-height: 100%;
   min-width: 60%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 `
 const PagingContainer = styled.div`
   min-width: 100%;
@@ -58,6 +58,8 @@ function Listing({ pageContext, data }) {
         <div className="posts-container">
           <Helmet title={config.siteTitle} />
           <SEO />
+          <Hero />
+          <Latest />
           <PostListing postEdges={postEdges} />
         </div>
         {renderPaging()}

@@ -5,6 +5,9 @@ import { IconContext } from "react-icons"
 import { FiMenu } from "react-icons/fi"
 import { IoMdClose } from "react-icons/io"
 
+import Social from "../Social"
+import Promotion from "../Promotion"
+
 const Container = styled.div`
 	z-index: 1;
 `
@@ -21,14 +24,18 @@ const Button = styled.button`
 const Nav = styled.nav`
 	position: absolute;
 	width: 100%;
-	background-color: #E4EAEE;
+	background-color: #f0f6fa;
 	top: 100%;
 	left: 0;
-	display: ${props => props.checked ? "flex" : "none"};
+	border-top: 1px solid #E1E1E1;
   @media (min-width: 1200px) {
 		border-left: 2px solid #FC3F80;
 		border-right: 2px solid #FC3F80;
   }
+	display: ${props => props.checked ? "flex" : "none"};
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 `
 const settings = {
 	color: "#657067", 
@@ -48,7 +55,13 @@ const Menu = () => {
 				</IconContext.Provider> 
     	</Button>
     	<Nav checked={checked}>
-    		<span>hi</span>
+    		<Promotion />
+    		<Social />
+    		{/*
+					diffrent topics and subtopics
+					newletter/subscribe
+					search
+    		*/}
     	</Nav>
     </Container>
   )
