@@ -25,8 +25,10 @@ const Nav = styled.nav`
 	top: 100%;
 	left: 0;
 	display: ${props => props.checked ? "flex" : "none"};
-	border-left: 2px solid #FC3F80;
-	border-right: 2px solid #FC3F80;
+  @media (min-width: 1200px) {
+		border-left: 2px solid #FC3F80;
+		border-right: 2px solid #FC3F80;
+  }
 `
 const settings = {
 	color: "#657067", 

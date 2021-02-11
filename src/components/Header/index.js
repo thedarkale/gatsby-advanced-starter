@@ -29,12 +29,11 @@ const Logo = styled.a`
 `
 
 const Navigation = styled.div`
-  background-color: #E4EAEE;
-  min-height: 70px;
+  background-color: #f0f6fa;
+  min-height: 120px;
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: flex-end;
 `
 
@@ -57,8 +56,8 @@ const Space = styled.div`
   width: 100%;
   border-top: 2px solid #FC3F80;
   @media (min-width: 1200px) {
-    border-left: 2px solid ${props => props.left ? "#FC3F80" : "#E4EAEE"};
-    border-right: 2px solid ${props => props.right ? "#FC3F80" : "#E4EAEE"};
+    border-left: 2px solid ${props => props.left ? "#FC3F80" : "#f0f6fa"};
+    border-right: 2px solid ${props => props.right ? "#FC3F80" : "#f0f6fa"};
   }
 `
 
