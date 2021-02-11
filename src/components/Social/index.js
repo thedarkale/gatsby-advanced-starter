@@ -7,7 +7,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"
 const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	padding-left: 50px;
+	padding-left: 30px;
 `
 
 const Icons = styled.div`

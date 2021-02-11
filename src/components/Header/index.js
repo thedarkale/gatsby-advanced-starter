@@ -17,11 +17,13 @@ const Heading = styled.div`
   padding: min(5vw, 40px);
   position: relative;
 `
-const Logo = styled.span`
+const Logo = styled.a`
   color: #657067;
   font-family: Poppins;
   font-size: min(7vw, 50px);
   font-weight: 300;
+  z-index: 1;
+  text-decoration: none;
 `
 
 const Nav = styled.nav`
@@ -70,7 +72,7 @@ const Info = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 1000px) {
+  @media (max-width: 790px) {
     display: none;
   }
 `
@@ -83,7 +85,7 @@ const Header = () => {
           <Social />
           <Promotion />
         </Info>
-        <Logo>thedarkale</Logo>
+        <Logo href="/">thedarkale</Logo>
       </Heading>
       <Nav>
         <LeafContainer>

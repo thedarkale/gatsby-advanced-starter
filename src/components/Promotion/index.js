@@ -6,6 +6,7 @@ const Container = styled.div`
 	object-fit: cover;
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 `
 
 const Img = styled.img`
@@ -16,7 +17,7 @@ const Text = styled.div`
 	color: #657067;
 	font-size: .9rem;
 	transform: rotate(-90deg);
-	padding: 10px;
+	margin-left: -25px;
 `
 
 const Promotion = () => {
