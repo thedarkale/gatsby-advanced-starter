@@ -54,10 +54,10 @@ const Leaf = styled.div`
 const Space = styled.div`
   height: 100%;
   width: 100%;
-  border-top: 2px solid #FC3F80;
+  border-top: 1px solid #FC3F80;
   @media (min-width: 1200px) {
-    border-left: 2px solid ${props => props.left ? "#FC3F80" : "#f0f6fa"};
-    border-right: 2px solid ${props => props.right ? "#FC3F80" : "#f0f6fa"};
+    border-left: 1px solid ${props => props.left ? "#FC3F80" : "#f0f6fa"};
+    border-right: 1px solid ${props => props.right ? "#FC3F80" : "#f0f6fa"};
   }
 `
 
