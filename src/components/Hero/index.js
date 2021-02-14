@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
+import { SectionHeader, SectionFooter } from "../Section"
 import Card from "../Card"
 
 const Container = styled.section`
@@ -85,6 +85,7 @@ const Image = styled.div`
 	background-color: gray;
 	width: 100%;
 	height: 350px;
+	background-image: url("${props => props.src}");
 `
 
 const Link = styled.a`
@@ -102,83 +103,13 @@ const CoverArticle = styled.article`
   margin: 15px 0 15px 0;
 `
 
-const SectionHeader = ({ name }) => {
-
-	const Container = styled.div`
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: space-around;
-	  align-items: center;
-	  width: 100%;
-	  padding-top: 10px;
-	  @media (max-width: 1200px) {
-		  display: none;
-	  }
-	  @media (max-width: 900px) {
-		  display: flex;
-	  }	  
-	`
-
-	const Divider = styled.hr`
-		border: none;
-	  border-bottom: 7px double #FC3F80;
-	  width: 100%;
-	  flex: 1;
-	`
-
-	const Heading = styled.span`
-		padding: 0 15px 0 15px;
-		font-size: 1.5rem;
-	`
-
-	return (
-		<Container>
-			<Divider />
-			<Heading>{ name }</Heading>
-			<Divider />
-		</Container>
-	)
-}
-
-const SectionFooter = ({ link }) => {
-
-	const Container = styled.a`
-	  display: flex;
-	  flex-direction: row;
-	  justify-content: flex-end;
-	  align-items: center;
-	  width: 100%;
-	  padding-top: 10px;
-	  @media (max-width: 1200px) {
-		  display: none;
-	  }
-	  @media (max-width: 900px) {
-		  display: flex;
-	  }
-	  border-bottom: 1px solid #657067;
-	`
-
-	const Redirect = styled.a`
-		font-size: 1rem;
-		font-weight: 400;
-		color: #657067;
-		text-decoration: none;
-	`
-
-	return (
-		<Container>
-			<Redirect href={link}>MORE</Redirect>
-		</Container>
-	)
-}
-
 const Hero = () => {
   return (
     <Container>
     	<CoverBlogColumn>
 		  	<Link href="#">
 			    <CoverArticle>
-			    	<Image></Image>
+			    	<Image src="https://source.unsplash.com/random"></Image>
 			    	<ArticleBody>
 				    	<Title>The Last Time you Watched 'Once Upon a Time in America', you didn't!</Title>
 				    	<Description>One Upon a Time in America even after 36 years still has some mysteries around it yet to be discovered. The movie never shown the way it was planned and a legacy for ages to come.</Description>

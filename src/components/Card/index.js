@@ -37,6 +37,7 @@ const Image = styled.div`
 	width: 100%;
 	height: 200px;
 	background-color: gray;
+	background-image: url("${props => props.src}");
 `
 
 const Link = styled.a`
@@ -50,7 +51,7 @@ const Card = ({link, category, title, description, imgSrc, imgAlt, author}) => {
   return (
   	<Link href={link}>
 	    <Container>
-	    	{imgSrc && <Image></Image>}
+	    	{imgSrc && <Image src={imgSrc}></Image>}
 	    	<Category>{category}</Category>
 	    	<Title>{title}</Title>
 	    	<Description>{description}</Description>
