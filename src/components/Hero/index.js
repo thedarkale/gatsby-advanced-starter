@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Card from "../Card"
 
 const Container = styled.section`
-	margin: 0 1rem 1rem 1rem;
+	margin: 1.5rem;
 	column-gap: 1.5rem;
   @media (min-width: 900px) {
 	  display: grid;
@@ -69,6 +69,7 @@ const ArticleBody = styled.div`
 const Title = styled.span`
 	font-weight: 600;
   font-size: calc(1.2rem + .2vw);
+  padding: 10px 0 10px 0;
 `
 
 const Description = styled.span`
@@ -83,7 +84,7 @@ const Author = styled.span`
 const Image = styled.div`
 	background-color: gray;
 	width: 100%;
-	height: 300px;
+	height: 350px;
 `
 
 const Link = styled.a`

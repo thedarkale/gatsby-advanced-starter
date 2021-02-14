@@ -8,6 +8,9 @@ const Container = styled.article`
   width: 100%;
   margin: 15px 0 15px 0;
 	max-width: 300px;
+  @media (max-width: 900px) {
+	  max-width: 100%;
+  }		
 `
 
 const Category = styled.span`
@@ -18,6 +21,7 @@ const Category = styled.span`
 const Title = styled.span`
 	font-weight: 600;
   font-size: calc(1.2rem + .2vw);
+  padding: 10px 0 10px 0;
 `
 
 const Description = styled.span`
@@ -39,7 +43,7 @@ const Link = styled.a`
 	text-decoration: none;
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-around;	
 `
 
 const Card = ({link, category, title, description, imgSrc, imgAlt, author}) => {
