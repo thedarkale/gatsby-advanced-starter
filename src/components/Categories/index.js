@@ -15,7 +15,7 @@ const Container = styled.div`
 
 const Section = styled.div`
 	padding: .7rem 1.3rem;
-	font-size: calc(.7em + min(.3vw, .7rem));
+	font-size: calc(1rem + min(.3vw, .7rem));
 `
 
 const Category = styled.a`
