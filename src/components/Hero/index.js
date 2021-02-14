@@ -140,6 +140,38 @@ const SectionHeader = ({ name }) => {
 	)
 }
 
+const SectionFooter = ({ link }) => {
+
+	const Container = styled.a`
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: flex-end;
+	  align-items: center;
+	  width: 100%;
+	  padding-top: 10px;
+	  @media (max-width: 1200px) {
+		  display: none;
+	  }
+	  @media (max-width: 900px) {
+		  display: flex;
+	  }
+	  border-bottom: 1px solid #657067;
+	`
+
+	const Redirect = styled.a`
+		font-size: 1rem;
+		font-weight: 400;
+		color: #657067;
+		text-decoration: none;
+	`
+
+	return (
+		<Container>
+			<Redirect href={link}>MORE</Redirect>
+		</Container>
+	)
+}
+
 const Hero = () => {
   return (
     <Container>
@@ -202,6 +234,7 @@ const Hero = () => {
     			imgSrc="https://source.unsplash.com/random"
     			imgAlt="Importance of Research in Education"
     			author="Sarthuk Dutt" />
+    		<SectionFooter link="#" />
     	</TrendyBlogColumn>
     </Container>
   )
