@@ -24,7 +24,7 @@ const Promotion = () => {
   return (
     <Container>
     	<a href="https://notionpress.com/read/our-days-a-survival-odyssey">
-    		<Img src={promotion} alt="promotion" />
+    		<Img src={promotion} alt="promotion cover" />
     	</a>
     	<Text><span>PROMOTION</span></Text>
     </Container>
