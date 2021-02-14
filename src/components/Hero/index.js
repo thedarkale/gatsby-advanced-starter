@@ -9,13 +9,13 @@ const Container = styled.section`
   @media (min-width: 900px) {
 	  display: grid;
 	  grid-template-areas: 
-	    "left left cover cover cover"
+	    "left cover cover cover cover"
 	    "right right right right right";
   }  
   @media (min-width: 1200px) {
 	  display: grid;
 	  grid-template-areas: 
-	    "left left cover cover right";
+	    "left cover cover cover right";
   }
 `
 

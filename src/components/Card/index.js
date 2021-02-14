@@ -11,19 +11,20 @@ const Container = styled.article`
 `
 
 const Category = styled.span`
+  color: #657067;
 	font-weight: 500;
 `
 
 const Title = styled.span`
 	font-weight: 600;
-  font-size: calc(1rem + min(.3vw, .7rem));
+  font-size: calc(1.3rem + min(.2vw, .7rem));
 `
 
 const Description = styled.span`
   
 `
 
-const Author = styled.u`
+const Author = styled.span`
   color: #657067;
   padding-top: 15px;
 `
@@ -41,7 +42,7 @@ const Card = ({link, category, title, description, imgSrc, imgAlt, author}) => {
 	    	<Category>{category}</Category>
 	    	<Title>{title}</Title>
 	    	<Description>{description}</Description>
-	    	<Author>By {author}</Author>
+	    	<Author><u><i>By {author}</i></u></Author>
 	    </Container>
     </Link>
   )
