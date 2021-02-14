@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Card from "../Card"
 
 const Container = styled.section`
-	margin: 1.5rem;
+	margin: 0.5rem 1.5rem;
 	column-gap: 1.5rem;
   @media (min-width: 900px) {
 	  display: grid;

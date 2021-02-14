@@ -35,7 +35,7 @@ const Author = styled.span`
 
 const Image = styled.div`
 	width: 100%;
-	height: 150px;
+	height: 200px;
 	background-color: gray;
 `
 
