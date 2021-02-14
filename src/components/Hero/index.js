@@ -6,16 +6,16 @@ import Card from "../Card"
 const Container = styled.section`
 	margin: 1rem;
 	column-gap: 1.5rem;
-  @media (min-width: 1000px) {
+  @media (min-width: 900px) {
 	  display: grid;
 	  grid-template-areas: 
-	    "left cover cover cover"
-	    "right right right right";
+	    "left left cover cover cover"
+	    "right right right right right";
   }  
   @media (min-width: 1200px) {
 	  display: grid;
 	  grid-template-areas: 
-	    "left cover cover right";
+	    "left left cover cover right";
   }
 `
 
@@ -40,10 +40,8 @@ const NewBlogColumn = styled.div`
   align-items: center;
 `
 
-const Divider = styled.hr`
-  background: #FC3F80;
-  height: 1px;
-  border: 0px;
+const Divider = styled.div`
+  border-top: 1px solid #FC3F80;
 	width: 100%;
 `
 

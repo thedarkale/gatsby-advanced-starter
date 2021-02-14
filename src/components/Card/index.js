@@ -7,6 +7,7 @@ const Container = styled.article`
   flex-direction: column;
   color: black;
   width: 100%;
+  margin: 15px 0 0 0;
 `
 
 const Category = styled.span`
