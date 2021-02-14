@@ -13,10 +13,11 @@ const Container = styled.div`
 const Icons = styled.div`
 	display: flex;
 	flex-direction: row;
+	justify-content: flex-start;
 `
 
 const Icon = styled.a`
-	padding: 10px;
+	padding: 8px;
 `
 
 const Text = styled.span`

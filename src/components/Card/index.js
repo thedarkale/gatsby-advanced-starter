@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 const Container = styled.article`
@@ -8,6 +7,7 @@ const Container = styled.article`
   color: black;
   width: 100%;
   margin: 15px 0 15px 0;
+	max-width: 300px;
 `
 
 const Category = styled.span`
@@ -17,7 +17,7 @@ const Category = styled.span`
 
 const Title = styled.span`
 	font-weight: 600;
-  font-size: calc(1.3rem + min(.2vw, .7rem));
+  font-size: calc(1.2rem + .2vw);
 `
 
 const Description = styled.span`
@@ -29,16 +29,24 @@ const Author = styled.span`
   padding-top: 15px;
 `
 
-const Img = styled.img`
-  height: 200px;
-  object-fit: cover;
+const Image = styled.div`
+	width: 100%;
+	height: 150px;
+	background-color: gray;
+`
+
+const Link = styled.a`
+	text-decoration: none;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
 `
 
 const Card = ({link, category, title, description, imgSrc, imgAlt, author}) => {
   return (
-  	<Link to={link} style={{ textDecoration: "none", width: "100%" }}>
+  	<Link href={link}>
 	    <Container>
-	    	{imgSrc && <Img src={imgSrc} alt={imgAlt} />}
+	    	{imgSrc && <Image></Image>}
 	    	<Category>{category}</Category>
 	    	<Title>{title}</Title>
 	    	<Description>{description}</Description>
