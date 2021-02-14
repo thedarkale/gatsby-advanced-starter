@@ -7,7 +7,7 @@ const Container = styled.article`
   flex-direction: column;
   color: black;
   width: 100%;
-  margin: 15px 0 0 0;
+  margin: 15px 0 15px 0;
 `
 
 const Category = styled.span`
@@ -25,7 +25,7 @@ const Description = styled.span`
 
 const Author = styled.u`
   color: #657067;
-  line-height: 3rem;
+  padding-top: 15px;
 `
 
 const Img = styled.img`
