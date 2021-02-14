@@ -4,22 +4,23 @@ import styled from "styled-components"
 import Card from "../Card"
 
 const Container = styled.section`
-	margin: 1rem;
+	margin: 0 1rem 1rem 1rem;
 	column-gap: 1.5rem;
   @media (min-width: 900px) {
 	  display: grid;
 	  grid-template-areas: 
-	    "left cover cover cover cover"
-	    "right right right right right";
+	    "popular cover cover cover cover"
+	    "trendy trendy trendy trendy trendy";
   }  
   @media (min-width: 1200px) {
 	  display: grid;
 	  grid-template-areas: 
-	    "left cover cover cover right";
+	    "popular cover cover cover trendy";
   }
 `
 
 const CoverBlogColumn = styled.div`
+	grid-area: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,15 +28,18 @@ const CoverBlogColumn = styled.div`
 `
 
 const PopularBlogColumn = styled.div`
+	grid-area: popular;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `
 
-const NewBlogColumn = styled.div`
+const TrendyBlogColumn = styled.div`
+	grid-area: trendy;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 `
@@ -48,7 +52,7 @@ const Divider = styled.div`
 const Hero = () => {
   return (
     <Container>
-    	<CoverBlogColumn style={{ gridArea: "cover", backgroundColor: '' }}>
+    	<CoverBlogColumn>
     		<Card
     			link="#"
     			title="The Last Time you Watched 'Once Upon a Time in America', you didn't!"
@@ -57,7 +61,7 @@ const Hero = () => {
     			imgAlt="The Last Time you Watched 'Once Upon a Time in America', you didn't!"
     			author="Aniruddha Pandey" />
     	</CoverBlogColumn>
-    	<PopularBlogColumn style={{ gridArea: "left", backgroundColor: '' }}>
+    	<PopularBlogColumn>
     		<Card
     			link="#"
     			category="MONEY"
@@ -88,7 +92,7 @@ const Hero = () => {
     			title="Quarantine Life"
     			author="Siddharth Mandge" />
     	</PopularBlogColumn>
-    	<NewBlogColumn style={{ gridArea: "right", backgroundColor: '' }}>
+    	<TrendyBlogColumn>
     		<Card
     			link="#"
     			title="Expectation VS Reality: A look back at Bihar Elections"
@@ -102,7 +106,7 @@ const Hero = () => {
     			imgSrc="https://source.unsplash.com/random"
     			imgAlt="Importance of Research in Education"
     			author="Sarthuk Dutt" />
-    	</NewBlogColumn>
+    	</TrendyBlogColumn>
     </Container>
   )
 }
