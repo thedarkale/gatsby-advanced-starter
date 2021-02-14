@@ -102,6 +102,44 @@ const CoverArticle = styled.article`
   margin: 15px 0 15px 0;
 `
 
+const SectionHeader = ({ name }) => {
+
+	const Container = styled.div`
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-around;
+	  align-items: center;
+	  width: 100%;
+	  padding-top: 10px;
+	  @media (max-width: 1200px) {
+		  display: none;
+	  }
+	  @media (max-width: 900px) {
+		  display: flex;
+	  }	  
+	`
+
+	const Divider = styled.hr`
+		border: none;
+	  border-bottom: 7px double #FC3F80;
+	  width: 100%;
+	  flex: 1;
+	`
+
+	const Heading = styled.span`
+		padding: 0 15px 0 15px;
+		font-size: 1.5rem;
+	`
+
+	return (
+		<Container>
+			<Divider />
+			<Heading>{ name }</Heading>
+			<Divider />
+		</Container>
+	)
+}
+
 const Hero = () => {
   return (
     <Container>
@@ -118,6 +156,7 @@ const Hero = () => {
 		    </Link>
     	</CoverBlogColumn>
     	<PopularBlogColumn>
+    		<SectionHeader name="Popular" />
     		<Card
     			link="#"
     			category="MONEY"
@@ -149,6 +188,7 @@ const Hero = () => {
     			author="Siddharth Mandge" />
     	</PopularBlogColumn>
     	<TrendyBlogColumn>
+    		<SectionHeader name="Trendy" />
     		<Card
     			link="#"
     			title="Expectation VS Reality: A look back at Bihar Elections"
