@@ -5,7 +5,6 @@ import Card from "../Card"
 import { SectionHeader, SectionFooter } from "../Section"
 
 const Container = styled.section`
-	margin: 1.5rem;
   display: grid;
   grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
