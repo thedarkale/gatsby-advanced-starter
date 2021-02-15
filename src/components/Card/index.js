@@ -22,6 +22,7 @@ const Title = styled.span`
 	font-weight: 600;
   font-size: calc(1.2rem + .2vw);
   padding: 10px 0 10px 0;
+  font-family: 'Prata', sans-serif;
 `
 
 const Description = styled.span`

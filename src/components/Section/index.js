@@ -28,6 +28,8 @@ const SectionHeader = ({ name }) => {
 	const Heading = styled.span`
 		padding: 0 15px 0 15px;
 		font-size: 1.5rem;
+	  font-family: 'Prata', sans-serif;
+		font-weight: 600;
 	`
 
 	return (

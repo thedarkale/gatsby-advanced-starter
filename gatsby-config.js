@@ -40,6 +40,17 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Poppins\:100,200,300,400`,
+          `Montserrat`,
+          `Prata`
+        ],
+        display: 'swap'
+      }
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [

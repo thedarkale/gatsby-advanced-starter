@@ -21,9 +21,9 @@ const Heading = styled.div`
 `
 const Logo = styled.a`
   color: #657067;
-  font-family: Poppins;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
   font-size: min(7vw, 50px);
-  font-weight: 300;
   z-index: 1;
   text-decoration: none;
 `

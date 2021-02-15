@@ -8,6 +8,9 @@ import Header from "../components/Header"
 import styled, { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
+
+	@charset "utf-8";
+
 	*, *:before, *:after {
 	  box-sizing: border-box;
 	}
@@ -21,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 	  padding: 0;
 	  min-height: 100%;
 	  min-width: 100%;
-	  font-family: Montserrat;
+	  font-family: 'Montserrat', sans-serif;
 	  /* background-color: #FFF8FA; */
 	}
 

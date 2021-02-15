@@ -13,7 +13,7 @@ const Container = styled.section`
 
 const Latest = () => {
   return (
-  	<>
+  	<div style={{ margin: "1.5rem" }}>
   		<SectionHeader name="Latest" />
 		    <Container>
 	    		<Card
@@ -67,7 +67,7 @@ const Latest = () => {
 	    			author="Saud Ansari" />
 		    </Container>
 			<SectionFooter link="#" />
-  	</>
+  	</div>
   )
 }
 

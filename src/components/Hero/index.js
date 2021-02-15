@@ -33,7 +33,7 @@ const PopularBlogColumn = styled.div`
   align-items: center;
 `
 
-const TrendyBlogColumn = styled.div`
+const TopBlogColumn = styled.div`
 	grid-area: trendy;
 
   display: flex;
@@ -67,9 +67,10 @@ const ArticleBody = styled.div`
 `
 
 const Title = styled.span`
-	font-weight: 600;
   font-size: calc(1.2rem + .2vw);
   padding: 10px 0 10px 0;
+  font-family: 'Prata', sans-serif;
+  font-weight: 600;
 `
 
 const Description = styled.span`
@@ -150,8 +151,8 @@ const Hero = () => {
     			title="Quarantine Life"
     			author="Siddharth Mandge" />
     	</PopularBlogColumn>
-    	<TrendyBlogColumn>
-    		<SectionHeader name="Trendy" />
+    	<TopBlogColumn>
+    		<SectionHeader name="Top" />
     		<Card
     			link="#"
     			title="Expectation VS Reality: A look back at Bihar Elections"
@@ -165,8 +166,7 @@ const Hero = () => {
     			imgSrc="https://source.unsplash.com/random"
     			imgAlt="Importance of Research in Education"
     			author="Sarthuk Dutt" />
-    		<SectionFooter link="#" />
-    	</TrendyBlogColumn>
+    	</TopBlogColumn>
     </Container>
   )
 }
